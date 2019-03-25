@@ -19,20 +19,27 @@ sudo apt-get install wireguard
 ```
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
-Verifiser at du nå har to filer `privatekey`og `pubkey`.
+Verifiser at du nå har to filer `privatekey` og `publickey`.
 
 ### 3) Aktiver packet forwarding
 Rediger filen  `/etc/sysctl.conf` og skru på IPV4 packet forwarding. 
 Den aktuelle linjen er `net.ipv4.ip_forward=1`.
-Kjør i tillegg `echo 1 > /proc/sys/net/ipv4/ip_forward`. **
+Kjør i tillegg `echo 1 > /proc/sys/net/ipv4/ip_forward`. * 
+
+<sub>* Dette sparer oss for en reboot.</sub>
 
 ### 4) Opprett WireGuard-config
-Opprett filen `/etc/wireguard/wg0.conf` og populer den med følgende data:
-```
+
+#### Finn navnet på ditt vanlige nettverks-interface
+Vi trenger å vite hvilket interface som trafikken som kommer inn på WireGuard skal rutes til. Dette heter typisk `eth0` eller `ens<tall>`. Sjekk hva ditt heter med `ifconfig`.
+
+#### Konfigurer WireGuard
+Opprett filen `/etc/wireguard/wg0.conf` og fyll den med følgende data. Legg merke til der vi setter inn din `privatekey` og ditt interface fra steget over.
+```bash
 [Interface]
 Address = 192.168.2.1
-PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE; ip6tables -A FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE; ip6tables -D FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o <interface name> -j MASQUERADE; ip6tables -A FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -A POSTROUTING -o <interface name> -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o <interface name> -j MASQUERADE; ip6tables -D FORWARD -i wg0 -j ACCEPT; ip6tables -t nat -D POSTROUTING -o <interface name> -j MASQUERADE
 PrivateKey = <insert key here>
 ListenPort = 51820
 
