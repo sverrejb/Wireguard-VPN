@@ -1,4 +1,4 @@
-﻿[English version](english.md)
+﻿[English version 🇬🇧](english.md)
 # Sett opp din egen VPN-server med WireGuard!
 **Tidsbruk:** En time  
 **Nivå:** Grunnleggende terminalbruk er en fordel.  
@@ -78,5 +78,3 @@ Send `public key`-en din fra mobilen og tilbake til
 Dien konfig må selvsagt peke på din server.
 
 #### Linux: Konfigurer tilsvarende som i server-oppsettet.
-
-
