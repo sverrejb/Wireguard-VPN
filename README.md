@@ -74,7 +74,7 @@ Send `public key`-en din fra mobilen og tilbake til
 #### Mac: Last ned fra [appstore](https://itunes.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12).
 #### Linux: Se installasjon under serveroppsett
 ### 2) Konfigurer klient
-#### Mac: Opprett ny tunell og sett opp slik som her:![Mac config](https://i.imgur.com/W60ldFj.jpg)
+#### Mac: Opprett ny tunell og sett opp slik som her:![Mac config](img/mac_config.jpg)
 Dien konfig må selvsagt peke på din server.
 
 #### Linux: Konfigurer tilsvarende som i server-oppsettet.
