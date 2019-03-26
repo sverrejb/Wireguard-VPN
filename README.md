@@ -3,7 +3,7 @@
 **Tidsbruk:** En time  
 **Nivå:** Grunnleggende terminalbruk er en fordel.  
 **Forberedelser/utstyr:**
--   Laptop.
+-   Laptop (Mac eller Linux)
 -   Tilgang til en ekstern server med Ubuntu/tilsvarende* og statisk IPv4 og IPv6** aktivert. Digital Ocean til 5 USD/mnd eller tilsvarende fungerer bra.
   -   Android/iPhone med appen installert (valgfritt).
 
