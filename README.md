@@ -1,4 +1,4 @@
-﻿[Test](norwegian.md)
+﻿[English version](english.md)
 # Sett opp din egen VPN-server med WireGuard!
 **Tidsbruk:** En time  
 **Nivå:** Grunnleggende terminalbruk er en fordel.  
