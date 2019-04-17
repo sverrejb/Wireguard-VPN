@@ -1,13 +1,11 @@
 ﻿[English version 🇬🇧](english.md)
 # Sett opp din egen VPN-server med WireGuard!
-**Tidsbruk:** En time  
-**Nivå:** Grunnleggende terminalbruk er en fordel.  
 **Forberedelser/utstyr:**
 -   Laptop (Mac eller Linux)
 -   Tilgang til en ekstern server med Ubuntu/tilsvarende* og statisk IPv4 og IPv6** aktivert. Digital Ocean til 5 USD/mnd eller tilsvarende fungerer bra.
   -   Android/iPhone med appen installert (valgfritt).
 
-<sub>* Denne guiden tar utgangspunkt i Ubuntu. Hjelp/støtte kan ikke garanteres for andre OS.</sub>
+<sub>* Denne guiden tar utgangspunkt i Ubuntu.</sub>
 <sub>** Dette er valgfritt</sub>
 ## Installasjon på server
 ### 1) SSH deg inn på serveren du ønsker å bruke, og installer WireGuard:
@@ -75,6 +73,6 @@ Send `public key`-en din fra mobilen og tilbake til
 #### Linux: Se installasjon under serveroppsett
 ### 2) Konfigurer klient
 #### Mac: Opprett ny tunell og sett opp slik som her:![Mac config](img/mac_config.jpg)
-Dien konfig må selvsagt peke på din server.
+Din konfig må selvsagt peke på din server.
 
 #### Linux: Konfigurer tilsvarende som i server-oppsettet.
