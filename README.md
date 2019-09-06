@@ -5,7 +5,8 @@
 -   Tilgang til en ekstern server med Ubuntu/tilsvarende* og statisk IPv4 og IPv6** aktivert. Digital Ocean til 5 USD/mnd eller tilsvarende fungerer bra.
   -   Android/iPhone med appen installert (valgfritt).
 
-<sub>* Denne guiden tar utgangspunkt i Ubuntu.</sub> . 
+<sub>* Denne guiden tar utgangspunkt i Ubuntu.</sub>
+
 <sub>** Dette er valgfritt</sub>
 ## Installasjon på server
 ### 1) SSH deg inn på serveren du ønsker å bruke, og installer WireGuard:
