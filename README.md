@@ -1,7 +1,7 @@
 ﻿[English version 🇬🇧](english.md)
 # Sett opp din egen VPN-server med WireGuard!
 **Forberedelser/utstyr:**
--   Laptop (Mac eller Linux)
+-   PC/Mac
 -   Tilgang til en ekstern server med Ubuntu/tilsvarende* og statisk IPv4 og IPv6** aktivert. Digital Ocean til 5 USD/mnd eller tilsvarende fungerer bra.
   -   Android/iPhone med appen installert (valgfritt).
 
@@ -69,7 +69,7 @@ Send `public key`-en din fra mobilen og tilbake til
 
 ## Installasjon på laptop
 ### 1) Installer Wireguard
-#### Windows: Nei.
+#### Windows: [Last ned her](https://www.wireguard.com/install/).
 #### Mac: Last ned fra [appstore](https://itunes.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12).
 #### Linux: Se installasjon under serveroppsett
 ### 2) Konfigurer klient
